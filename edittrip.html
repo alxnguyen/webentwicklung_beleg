@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<header>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+</header>
+<body>
+    <img class="logo" src="http://via.placeholder.com/300x100" alt="placeholder image">
+    <div class="grail">
+        <div class="nav">
+            <a href="map.html">zurück zur Karte</a>
+			<a href="index.html">zurück zum Login</a>
+        </div>
+		<div class="editwindow">
+			<input type="text" size="20" placeholder="Name der Reise">
+			<select name="Land">
+				<option value="l1">Land 1</option>
+				<option value="l2">Land 2</option>
+				<option value="l3">Land 3</option>
+				<option value="l4">Land 4</option>
+				<option value="l5">Land 5</option>
+			</select>
+			Start:
+			<input type="date" name="Startdatum">
+			Ende:
+			<input type="date" name="Enddatum">
+			<button type="submit">Reise erstellen</button>
+		</div>
+		<table id="table1">
+			<tr>
+				<th>Name</th>
+				<th>Land</th>
+				<th>Start</th>
+				<th>Ende</th>
+			</tr>
+			<tr>
+				<td>Testreise 1</td>
+				<td>Hawaii</td>
+				<td>21.04.2017</td>
+			<td>26.04.2017</td>
+			<td class="bCollumn"><button>bearbeiten </button></td>
+			<td class="bCollumn"><button>löschen </button></td>
+			</tr>
+			<tr>
+				<td>Testreise 2</td>
+				<td>Kuba</td>
+				<td>30.04.2017</td>
+				<td>4.05.2017</td>
+				<td class="bCollumn"><button>bearbeiten </button></td>
+				<td class="bCollumn"><button>löschen </button></td>
+			</tr>
+							<tr>
+				<td>Testreise 3</td>
+				<td>Mexiko</td>
+				<td>10.05.2017</td>
+				<td>16.05.2017</td>
+				<td class="bCollumn"><button>bearbeiten </button></td>
+				<td class="bCollumn"><button>löschen </button></td>
+			</tr>
+		</table>
+    </div>
+</body>
