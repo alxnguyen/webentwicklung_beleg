@@ -1,3 +1,5 @@
+html {background-color: #fcfccc}
+
 .box {
     display: flex;
     width: 300px;
@@ -32,7 +34,8 @@ img.logo {
 .grail {
     display: flex;
     flex-direction: column;
-    margin-left: 300px;
+    margin-left: 150px;
+	margin-right: 150px;
 }
 
 .nav {
@@ -40,12 +43,40 @@ img.logo {
     flex-direction: row;
     gap: 100px;
     margin-bottom: 50px;
+	background-color: #e0ffff;
+	border: 1px solid black;
+	justify-content: space-between
 }
 
+
 #map_pic {
-    width: 70%;
+    width: 100%;
 }
 
 button {
     margin-top: 10px;
+}
+
+
+ table	{
+	 width: 100%;
+	 margin-top: 20px;
+	 background-color: bisque;
+	 border: 1px solid black;
+ }
+td {
+  border: 1px solid black;
+  background-color: #fff6e9;
+}
+
+.bCollumn	{
+	width: 7%;
+	border: 0px;
+	background-color: bisque;
+}
+
+.editwindow 	{
+	gap: 20px;
+	display: flex;
+	justify-content: center;
 }
