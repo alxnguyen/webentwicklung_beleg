@@ -80,3 +80,7 @@ td {
 	display: flex;
 	justify-content: center;
 }
+
+#map {
+  height: 98vh
+}
