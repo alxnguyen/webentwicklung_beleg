@@ -11,8 +11,8 @@
 			<a href="index.html">zurück zum Login</a>
         </div>
 		<div class="editwindow">
-			<input type="text" size="20" placeholder="Name der Reise">
-			<select name="Land">
+			<input type="text" size="20" id="tripname" placeholder="Name der Reise" required>
+			<select name="Land" id="land_list" required>
 				<option value="l1">Land 1</option>
 				<option value="l2">Land 2</option>
 				<option value="l3">Land 3</option>
@@ -20,10 +20,10 @@
 				<option value="l5">Land 5</option>
 			</select>
 			Start:
-			<input type="date" name="Startdatum">
+			<input type="date" name="Startdatum" id="start" required>
 			Ende:
-			<input type="date" name="Enddatum">
-			<button type="submit">Reise erstellen</button>
+			<input type="date" name="Enddatum" id="ende" required>
+			<button type="submit" id="create_btn" name="create" onclick="trip_manager(0)">Reise erstellen</button>
 		</div>
 		<table id="table1">
 			<tr>
@@ -58,4 +58,70 @@
 			</tr>
 		</table>
     </div>
+	<script>
+		function trip_manager(index) {
+			button_name = document.getElementById("create_btn").name;
+			if(button_name === "create") {
+				addTrip();
+			}
+			else {
+				editTrip();
+			}
+		}
+		function addTrip() {
+			var table = document.getElementById("table1");
+			var row = table.insertRow(table.size);
+			var name = row.insertCell(0);
+			name.id = "" + row + "_0";
+			var land = row.insertCell(1);
+			land.id = "" + row + "_1";
+			var start = row.insertCell(2);
+			start.id = "" + row + "_2";
+			var ende = row.insertCell(3);
+			ende.id = "" + row + "_3";
+			var bearbeiten = row.insertCell(4);
+			var löschen = row.insertCell(5);
+			name.innerHTML = document.getElementById("tripname").value;
+			land.innerHTML = document.getElementById("land_list").value;
+			start.innerHTML = document.getElementById("start").value;
+			ende.innerHTML = document.getElementById("ende").value;
+			var btn = document.createElement("BUTTON");
+			btn.id = "button" + table.size + "";
+			btn.innerHTML = "bearbeiten";
+			btn.onclick = function() {bearbeite(row.rowIndex)};
+			bearbeiten.className = "bCollumn";
+			bearbeiten.appendChild(btn);
+			var btn2 = document.createElement("BUTTON");
+			btn2.id = "button_del" + table.size + "";
+			btn2.innerHTML = "löschen";
+			btn2.onclick = function() {lösche(row.rowIndex)};
+			löschen.className = "bCollumn";
+			löschen.appendChild(btn2);
+		}
+		
+		function bearbeite(row) {
+			var button = document.getElementById("create_btn");
+			button.name = row;
+			button.innerHTML = "Finalisieren";
+		}
+		
+		function editTrip() {
+			var index = document.getElementById("create_btn").name;
+			var name = document.getElementById("table1").rows[index].cells[0];
+			var land = document.getElementById("table1").rows[index].cells[1];
+			var start = document.getElementById("table1").rows[index].cells[2];
+			var ende = document.getElementById("table1").rows[index].cells[3];
+			name.innerHTML = document.getElementById("tripname").value;
+			land.innerHTML = document.getElementById("land_list").value;
+			start.innerHTML = document.getElementById("start").value;
+			ende.innerHTML = document.getElementById("ende").value;
+			var button = document.getElementById("create_btn");
+			button.name = "create";
+			button.innerHTML = "Reise erstellen";
+		}
+		
+		function lösche(index) {
+			document.getElementById("table1").deleteRow(index);
+		}
+	</script>
 </body>
