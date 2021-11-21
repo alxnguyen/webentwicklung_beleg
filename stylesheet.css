@@ -84,3 +84,7 @@ td {
 #map {
   height: 98vh
 }
+
+#warning {
+    color:red
+}
