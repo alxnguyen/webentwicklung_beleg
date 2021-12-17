@@ -2,9 +2,9 @@
   "name": "webentwicklung_beleg_node",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./public/src/index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node public/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db": "knex"
   },
