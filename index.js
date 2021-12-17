@@ -1,3 +1,9 @@
+const port=process.env.PORT
+var express=require('express');
+var app=express();
+app.use(express.static('public'));
+app.listen(port)
+
 function loginCheck()	{
 	var goalWord="hunter2";
 	var goalMail="huehne@htw-berlin.de";

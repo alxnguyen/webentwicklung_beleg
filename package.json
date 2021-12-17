@@ -2,10 +2,11 @@
   "name": "webentwicklung_beleg_node",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+    "db": "knex"
   },
   "repository": {
     "type": "git",
