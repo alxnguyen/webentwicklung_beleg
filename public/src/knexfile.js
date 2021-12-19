@@ -11,6 +11,7 @@ module.exports = {
         require: true,
         rejectUnauthorized: false
       }
+    }
     pool: {
       min: 2,
       max: 10,
