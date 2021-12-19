@@ -1,11 +1,11 @@
 {
-  "name": "backend_test",
+  "name": "webentwicklung_beleg_node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/src/index.js",
   "scripts": {
     "migrate": "npx knex migrate:latest --knexfile db/knexfile.js",
-    "dev": "nodemon index.js",
+    "dev": "nodemon public/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
