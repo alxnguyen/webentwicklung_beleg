@@ -1,5 +1,3 @@
-import { Knex } from "knex";
-
 const config: Knex.Config = {
   client: "pg",
   connection: {
