@@ -1,22 +1,26 @@
-{
+ {
   "name": "webentwicklung_beleg_node",
   "version": "1.0.0",
   "description": "",
-  "main": "public/src/index.js",
+  "main": "./public/src/index.js",
   "scripts": {
-    "migrate": "npx knex migrate:latest --knexfile db/knexfile.ts",
-    "dev": "nodemon public/src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node public/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "knex"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxnguyen/webentwicklung_beleg.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alxnguyen/webentwicklung_beleg/issues"
+  },
+  "homepage": "https://github.com/alxnguyen/webentwicklung_beleg#readme",
   "dependencies": {
     "express": "^4.17.2",
     "knex": "^0.95.14",
     "pg": "^8.7.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }
