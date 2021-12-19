@@ -1,26 +1,22 @@
- {
-  "name": "webentwicklung_beleg_node",
+{
+  "name": "backend_test",
   "version": "1.0.0",
   "description": "",
-  "main": "./public/src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node public/src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "db": "knex"
+    "migrate": "npx knex migrate:latest --knexfile db/knexfile.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alxnguyen/webentwicklung_beleg.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alxnguyen/webentwicklung_beleg/issues"
-  },
-  "homepage": "https://github.com/alxnguyen/webentwicklung_beleg#readme",
   "dependencies": {
     "express": "^4.17.2",
     "knex": "^0.95.14",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
