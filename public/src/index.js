@@ -1,8 +1,11 @@
-const port=process.env.PORT
-var express=require('express');
-var app=express();
+const express = require("express");
+const router = require("../../routes");
+const port = process.env.PORT;
+
+const app = express();
 app.use(express.static('public'));
-app.listen(port)
+
+app.listen(port, () => console.log(`server listening to port ${port}`));
 
 function loginCheck()	{
 	var goalWord="hunter2";
