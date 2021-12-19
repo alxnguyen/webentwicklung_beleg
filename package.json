@@ -19,7 +19,7 @@
   },
   "scripts": {
     "migrate": "npx knex migrate:latest --knexfile public/src/knexfile.js --env production"
-  }
+  },
   "homepage": "https://github.com/alxnguyen/webentwicklung_beleg#readme",
   "dependencies": {
     "express": "^4.17.2",
