@@ -4,6 +4,10 @@ var app=express();
 app.use(express.static('public'));
 app.listen(port)
 
+konst knex = require("knex");
+const config=require(".../knexfile");
+const db=knex(config.production);
+
 function loginCheck()	{
 	var goalWord="hunter2";
 	var goalMail="huehne@htw-berlin.de";
