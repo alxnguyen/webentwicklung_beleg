@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node public/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "db": "knex"
+    "db": "knex",
+    "migrate": "npx knex migrate:latest --knexfile public/src/knexfile.js --env production"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alxnguyen/webentwicklung_beleg/issues"
-  },
-  "scripts": {
-    "migrate": "npx knex migrate:latest --knexfile public/src/knexfile.js --env production"
   },
   "homepage": "https://github.com/alxnguyen/webentwicklung_beleg#readme",
   "dependencies": {
