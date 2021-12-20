@@ -7,7 +7,6 @@ app.listen(port)
 const knex = require("knex");
 const config=require("./knexfile");
 const db=knex(config.production);
-const authService=require("./AuthService.ts");
 
 function loginCheck()	{
 	var goalWord="hunter2";
